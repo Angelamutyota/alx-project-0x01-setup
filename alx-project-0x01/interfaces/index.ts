@@ -3,14 +3,12 @@ export interface PostProps {
   id: number;
   title: string;
   body: string;
-  
 }
 
-export interface Post {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
+/* Users-related interfaces */
+export interface Geo {
+  lat: string;
+  lng: string;
 }
 
 export interface Address {
@@ -18,7 +16,7 @@ export interface Address {
   suite: string;
   city: string;
   zipcode: string;
-  geo?: { lat: string; lng: string };
+  geo?: Geo;
 }
 
 export interface Company {
@@ -27,7 +25,7 @@ export interface Company {
   bs?: string;
 }
 
-export interface User {
+export interface UserProps {
   id: number;
   name: string;
   username: string;
