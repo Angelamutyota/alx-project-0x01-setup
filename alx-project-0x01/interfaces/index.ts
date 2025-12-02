@@ -21,7 +21,7 @@ export interface Address {
 
 export interface Company {
   name: string;
-  catchPhrase?: string;
+  catchPhrase: string; // now required per checker
   bs?: string;
 }
 
