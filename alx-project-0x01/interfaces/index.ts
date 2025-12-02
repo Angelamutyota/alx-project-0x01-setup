@@ -47,3 +47,30 @@ export interface PostModalProps {
   onClose: () => void;
   onSubmit: (post: PostData) => void;
 }
+
+export interface UserData {
+  name: string;
+  username: string;
+  email: string;
+  phone?: string;
+  website?: string;
+  address?: {
+    street?: string;
+    suite?: string;
+    city?: string;
+    zipcode?: string;
+    geo?: Geo;
+  };
+  company?: {
+    name?: string;
+    catchPhrase?: string;
+    bs?: string;
+  };
+}
+
+/** Props expected by the UserModal component */
+export interface UserModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  onSave: (user: UserData) => void;
+}
